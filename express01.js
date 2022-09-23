@@ -1,13 +1,16 @@
 const express = require("express");
 const app = express();
 
-// respond with "hello world" when a GET request is made to the homepage
+// Respond with "hello world" when a gets request is made to the homepage
 app.get("/", (req, res) => {
   res.sendFile("D:/Codes/Backend/views/index.html");
 });
+//Going to another page
 app.get("/about", (req, res) => {
   res.sendFile("./views/about.html", { root: __dirname });
 });
+//You can sendFile in two ways, see both the cases above.
+
 
 app.listen(3000);
 
